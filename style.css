@@ -1,0 +1,260 @@
+* {
+	box-sizing: border-box;
+
+}
+
+body {
+	font-family: "Mukta", sans-serif;
+	margin: 0 auto;
+	width: 1440px;
+	background-color: #E8EEE6;
+
+	
+}
+
+main {
+	width: 600px;
+
+	margin: 0 auto;
+	padding: 2rem 1rem;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	font-size: 2.5rem;
+	color: #00913D;
+	font-weight: bold;
+}
+
+h1 span {
+	color: #222;
+	font-weight: normal;
+}
+
+.search {
+	width: 100%;
+	margin: 2rem 0;
+	display: flex;
+	justify-content: center;
+
+}
+
+.search input {
+	width: 100%;
+	height: 2rem;
+	padding: 1.5rem;
+	border: none;
+	border-radius: 99px;
+}
+
+.search input::placeholder {
+	font-size: 1rem;
+}
+
+.title,
+.info-cta {
+	width: 100%;
+	margin: 2rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-size: 2rem;
+	font-weight: bold;
+
+	color: #222;
+}
+
+.info-cta a {
+	border: 3px solid #00913D;
+	border-radius: 5px;
+	color: #00913D;
+
+	padding: .725rem;
+	font-size: 1.5rem;
+
+	text-decoration: none;
+
+	transition: all .3s ease;
+}
+
+.info-cta a:hover {
+	background-color: #00913D;
+	color: #f5f5f5;
+	cursor: pointer;
+}
+
+.divider {
+	width: 100%;
+	border: 1px solid #c4c4c4;
+	border-radius: 5px;
+	margin: 0 0 2rem 0;
+}
+
+.contacts-wrapper {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.contacts-wrapper .contact-card {
+	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 1rem;
+
+	background-color: #fff;
+	border-radius: 5px;
+
+	font-size: 1.25rem;
+}
+
+.contacts-wrapper .contact-card .infos {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.contacts-wrapper .contact-card .info-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	color: #222;
+	font-weight: bold;
+
+	gap: 1rem;
+}
+
+.contacts-wrapper .contact-card .info-header .badge {
+	background-color: #ce246d30;
+	color: #ce246d;
+	padding: .25rem .25rem;
+	border-radius: 5px;
+	font-size: .725rem;
+	text-transform: uppercase;
+}
+
+.contacts-wrapper .contact-card .info-content {
+	color: #888;
+
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+	margin-top: .5rem;
+}
+
+.contacts-wrapper .contact-card .info-content a {
+	color: #888;
+
+	text-decoration: none;
+}
+
+.contacts-wrapper .contact-card .actions button {
+	border: none;
+	background: transparent;
+
+	transition: all .3s ease;
+} 
+
+svg {
+	fill: red;
+}
+
+.contacts-wrapper .contact-card .actions button:hover {
+	cursor: pointer;
+}
+
+/* novo contato */
+
+.back {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: flex-start;
+
+	margin-top: 1rem;
+}
+
+.back a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: #00913D;
+	font-size: 1.5rem;
+	font-weight: bold;
+
+	gap: 1rem;
+}
+
+.form-container {
+	width: 100%;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+form input,
+form select {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	
+	gap: 1rem;
+
+	padding: 1rem;
+
+	background-color: #fff;
+	border-radius: 5px;
+	border: none;
+
+	font-size: 1.25rem;
+}
+
+form select:disabled {
+	font-size: red;
+}
+
+.register {
+	width: 100%;
+
+	padding: 1rem;
+	background-color: #00913D;
+	border: none;
+	border-radius: 5px;
+
+	color: #f5f5f5;
+	font-size: 1.5rem;
+
+	transition: all .3s ease;	
+}
+
+.register:hover {
+	cursor: pointer;
+	background-color: #007f3d;
+}
+
+.register:disabled {
+	background-color: #898989;
+	cursor: not-allowed;
+}
