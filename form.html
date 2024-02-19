@@ -23,10 +23,10 @@
     </div>
     <div class="divider"></div>
     <div class="form-container">
-      <form action="">
-        <input type="text" id="name" placeholder="Nome" />
-        <input type="text" id="mail" placeholder="E-mail" />
-        <input type="number" id="phone" placeholder="Telefone" />
+      <form id="form">
+        <input type="text" id="name" placeholder="Nome" required />
+        <input type="text" id="mail" placeholder="E-mail" required />
+        <input type="number" id="phone" placeholder="Telefone" required />
         <select id="badge">
           <option value="" selected disabled>Categoria</option>
           <option value="instagram">Instagram</option>
@@ -34,9 +34,10 @@
           <option value="colegio">Colégio</option>
         </select>
   
-        <button class="register" type="submit" disabled>Cadastrar</button>
+        <button class="register" type="submit">Cadastrar</button>
       </form>
     </div>
   </main>
 </body>
+<script src="form.js"></script>
 </html>
