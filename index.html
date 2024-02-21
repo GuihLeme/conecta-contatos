@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modal.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,13 +20,66 @@
       <input type="text" id="search" placeholder="Pesquisar contato...">
     </div>
     <div class="info-cta">
-      <strong>3 contatos</strong>
-      <a href="/form.html">Novo contato</a>
+      <strong id="contact"></strong>
+      <button onclick="abrirModalCriar()">Novo contato</button>
     </div>
     <div class="divider"></div>
+    <div class="organizar">
+      <button onclick="organizarContatos()">
+        <img src="./assets/voltar.svg" alt="organizar">
+        Nome
+      </button>
+    </div>
     <div id="contacts-wrapper">
+      <!-- <div class="contact-card">
+        <div class="infos">
+          <div class="info-header">
+            <h3>${contato.nome}</h3>
+            <span class="badge">${contato.badge}</span>
+          </div>
+          <div class="info-content">
+            <a href="mailto:${contato.email}">${contato.email}</a>
+            <a href="tel:+550${contato.phone}">${contato.phone}</a>
+          </div>
+          </div>
+          <div class="actions">
+            <button><img class="edit" src="./assets/edit.svg" alt="editar" onclick="listarContatos()" />
+            <button><img class="delete" src="./assets/delete.svg" alt="deletar" />
+          </div>
+        </div> -->
+      </div>
     </div>
   </main>
+
+  <div id="modal">
+    <div class="modal-container">
+      <header>
+        <h1>Conecta<span>Contatos</span></h1>
+      </header>
+      <div class="back">
+        <button onclick="fecharModal()"><img src="./assets/voltar.svg" alt="voltar">Voltar</button>
+      </div>
+      <div class="title">
+        <strong id="title-modal">Novo contato</strong>
+      </div>
+      <div class="divider"></div>
+      <div class="form-container">
+        <form id="form">
+          <input type="text" id="name" placeholder="Nome" required />
+          <input type="text" id="mail" placeholder="E-mail" required />
+          <input type="number" id="phone" placeholder="Telefone" required />
+          <select id="badge">
+            <option value="" selected disabled>Categoria</option>
+            <option value="instagram">Instagram</option>
+            <option value="discord">Discord</option>
+            <option value="colegio">Colégio</option>
+          </select>
+    
+          <button id="action" class="register" type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="script.js"></script>
 </html>
