@@ -11,6 +11,8 @@ function fecharModal() {
 
 function abrirModalCriar() {
   document.getElementById('form').classList.add('create')
+  document.getElementById('action').innerText = 'Criar contato'
+  document.getElementById('title-modal').innerText = `Criar contato`
 
   abrirModal()
 
@@ -179,6 +181,7 @@ function organizarContatos() {
   const contatos = pegarDadosLocalStorage()
 
   ordenar = !ordenar
+  document.getElementById('order').style.transform = ordenar ? 'rotate(90deg)' : 'rotate(-90deg)'
 
   contatos.sort((a, b) => {
     return ordenar ?
